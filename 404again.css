@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 50em;
+    margin: 0 auto;
+}
+.error{
+    text-align: center;
+}
+.error__title{
+    font-size: 18rem;
+    font-weight: 200;
+    font-family: "Montserrat";
+    margin: 0;
+    background: linear-gradient(#00bcd4, #9575cd);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    
+}
+.error__type{
+    color: white;
+    font-weight: 600;
+    font-size: 2.75rem;
+    letter-spacing: 0.125em;
+    margin: 0;
+    text-transform: uppercase;
+}
+.error__cta{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2;
+    font-family: sans-serif;
+}
+.error__link{
+    color: white;
+    padding: .35em .5em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.error__link--purple{
+    
+    background: #00bcd4;
+}
+.error__link--purple:hover{
+    color:white;
+    background: #131537;
+}
+.error__link--blue{
+    background: #050819;
+}
+.error__link--blue:hover{
+    background: #201650;
+
+}
+.star{
+    position: absolute;
+    height: 2px;
+    width: 2px;
+    background: white;
+    right: 0;
+    animation: starTwinkle 2s linear infinite;
+    -webkit-animation: starTwinkle 2s linear infinite;
+}
+.astronaut img{
+    width: 120px;
+    position: absolute;
+    top: 45%;
+    animation: astronautFly 5s linear infinite;
+    -webkit-animation: astronautFly 5s linear infinite;
+}
+@keyframes astronautFly{
+    0%{
+      left: -100px;
+    }
+    25%{
+        top: 50%;
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+}
+    50%{
+        top: 55%;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+}
+    75%{
+        top: 60%;
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+}
+    100%{
+        left: 110%;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+}
+}
+
+
+@keyframes starTwinkle{
+    0%{
+   background: rgb(255,255,255,0.4);
+    }
+    25%{
+        background: rgb(255,255,255,0.8);   
+    }
+    50%{
+        background: rgb(255,255,255,1.0);
+    }
+    75%{
+        background: rgb(255,255,255,0.4);
+    }
+    100%{
+        background: rgb(255,255,255,0.8); 
+    }
+}
+
+@media (max-width: 40em){
+    .error__title{
+        font-size: 10rem;
+    }
+    .error__type{
+        font-size: 1.25rem;
+    }
+    .error__cta{
+        font-size: 1rem;
+    }
+}
